@@ -62,7 +62,7 @@ Doctor
 | 2        | Dr. Erika Eriksson
 | 3        | Dr. Sven Svensson
 
-Refined with bridge tables to reflext many-to-many relationships
+Refined with bridge tables to reflect many-to-many relationships
 
 <img src = "../assets/conceptual_exercise_hospital.png" width=300>
 
