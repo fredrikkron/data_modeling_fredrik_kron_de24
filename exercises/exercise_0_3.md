@@ -28,6 +28,8 @@ Customer ***Makes*** Rental
 
 Rental ***Assigned to*** Car
 
+<img src = "../assets/image_2_b.png" width=300>
+
 
 c)
 
