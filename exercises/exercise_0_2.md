@@ -14,21 +14,18 @@ c) Draw a conceptual ERD using crow foots notation.
 a)
 ## Entities and Attributes
 
-|Library     |Book        |Member      |
-|------------|------------|------------|
-|books       |title       |ID          |
-|members     |author      |name        |
-|            |ISBN number |contact info|
-
+|Library     |Book        |Member      |Borrowing   |
+|------------|------------|------------|-------------
+|library_id  |book_id     |member_id   |borrow_id   |
+|name        |title       |name        |book_id     |
+|location    |author      |contact_info|member_id   |
+|            |library_id  |            |borrow_date |
+|            |isbn        |            |return_date |
 
 b)
 
-Library to Book = contains
-
-Book to Member = borrows
-
-
+borrowing
 
 c)
 
-<img src = "../assets/conceptual_exercise_2.png" width=300>
+<img src = "../assets/0_2_b.png" width=300>
