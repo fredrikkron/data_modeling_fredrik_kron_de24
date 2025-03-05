@@ -1,6 +1,4 @@
-# Exercise 0
-
-## 1. Hospital task
+# Exercise 0_1 - Hospital task
 
 You have this json data, convert it into three tables: Hospital, Department and Doctor. Fill these tables with data. Do this manually and not programmatically.
 
@@ -43,7 +41,7 @@ Hospital
 
 |hospital_id | name         | address          |
 |------------| ----------   | -----------------|
-|1           | Sjukhusstock | Drottningsgatan 3|
+|1           | Sjukhusstock | Drottninggatan 3|
 
 
 Department
