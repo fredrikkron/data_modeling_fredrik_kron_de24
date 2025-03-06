@@ -28,7 +28,7 @@ A teacher can teach multiple courses.
 ## b) Entities & Attributes
 ### Professor 
 
-Professor_id, Name, Email, Course_id
+Professor_id, Name, Email, Department
 
 ### Student
 
@@ -36,7 +36,7 @@ Student_id, Name, Email
 
 ### Course
 
-Course_id, Course_name, Course_points
+Course_id, Course_name, Course_points, Professor_id
 
 ### Enrollment
 
