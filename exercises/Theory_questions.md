@@ -21,10 +21,15 @@ Better to store a certain start date/date of birth and calculate it dynamically 
     - Hierarchical
         Organized data in a tree-like structure.
     - Graph
-        Nodes connected by edges, representing networks (Graphs).
+        Nodes connected by edges, representing networks.
 
 ## d) Give examples of how each data structure is used in real-world applications
+Linear data structure is used in many different scenarios (arrays, linked lists, stacks and queues).  
+Image processing, music playlists, browser history and print job scheduling are some examples.
 
+Hierarchial data structure is used in file systems (directories/subdirectories), databases and AI.
+
+Graph data structures is used in navigation systems, social networks and Google Search.
 
 
 ## e) What is cardinality in data modeling, and why is it important?
