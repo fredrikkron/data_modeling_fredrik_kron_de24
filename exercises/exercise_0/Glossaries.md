@@ -21,3 +21,4 @@
 | one-to-one | A type of relationship where one record in a table is associated with only one record in another table. |
 | one-to-many | A type of relationship where one record in a table is associated with multiple records in another table. |
 | many-to-many | A type of relationship where multiple records in one table as associated with multiple records in another table. This is typically implemented using a junction (bridge) table that contains foreign keys referencing both related tables. |
+| composite entity | An entity that resolves many-to-many relationship between two entities. (bridge table on conceptual level) |
