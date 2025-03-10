@@ -33,7 +33,7 @@ Approach
 
 Initial naive conceptual ERD
 
-<img src = "../assets/Initial_conceptual_model.png" width=300>
+<img src = "../../assets/Initial_conceptual_model.png" width=300>
 
 **Initial tables**
 
@@ -62,7 +62,7 @@ Doctor
 
 Refined with bridge tables to reflect many-to-many relationships
 
-<img src = "../assets/conceptual_exercise_hospital.png" width=300>
+<img src = "../../assets/conceptual_exercise_hospital.png" width=500 height=250>
 
 HospitalDepartment
 

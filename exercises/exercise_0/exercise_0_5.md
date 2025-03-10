@@ -44,7 +44,7 @@ Enrollment_id, Grade, Student_id, Course_id
 
 ### c)
 
-<img src = "../assets/University_ERD.png" width=600>
+<img src = "../../assets/University_ERD.png" width=600>
 
 ### d)
 

@@ -28,4 +28,4 @@ borrowing
 
 c)
 
-<img src = "../assets/0_2_b.png" width=300>
+<img src = "../../assets/0_2_b.png" width=500>

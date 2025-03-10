@@ -34,4 +34,4 @@ Order_item
 
 # b) Create a conceptual ERD with cardinalities
 
-<img src = "../assets/erd_exercise_4.png" width=600>
+<img src = "../../assets/erd_exercise_4.png" width=600>
