@@ -23,7 +23,7 @@ Order_item
 
 ***Customer*** can place one or more ***Orders***
 
-***Order*** contains one or more ***Products***
+***Order*** contains one or more ***Products***, but one ***Product*** can be in one or more ***Orders***
 
 Therefore we need ***Order_Line*** as composite entity
 
