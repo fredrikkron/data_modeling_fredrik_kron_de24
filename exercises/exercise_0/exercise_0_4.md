@@ -35,3 +35,10 @@ Order_item
 # b) Create a conceptual ERD with cardinalities
 
 <img src = "../../assets/updated_exercise_4.png" width=600>
+
+---
+
+# Business rules
+
+- Category must have at least 1 product
+- Everything is shipped from the same warehouse
