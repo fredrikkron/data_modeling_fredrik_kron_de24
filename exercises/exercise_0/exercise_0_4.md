@@ -38,7 +38,7 @@ Therefore we need ***Order_Line*** as composite entity
 
 # b) Create a conceptual ERD with cardinalities
 
-<img src = "../../assets/updated_exercise_4_v2.png" width=600>
+<img src = "../../assets/updated_exercise_4_v3.png" width=600>
 
 ---
 
