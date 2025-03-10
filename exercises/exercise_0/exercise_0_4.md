@@ -21,20 +21,24 @@ Order_item
 
 ## Relationships
 
-***Customer*** places ***Order***
+***Customer*** can place one or more ***Orders***
 
-***Order*** contains ***Product***
+***Order*** contains one or more ***Products***
 
-***Product*** belongs to ***Category***
+Therefore we need ***Order_Line*** as composite entity
 
-***Order*** has ***Payment***
+***Product*** belongs to one and only ***Category***
 
-***Order*** has ***Shipping***
+***Category*** can have one or more products
+
+***Order*** has one and only ***Payment***
+
+***Order*** has one and only ***Shipping***
 
 
 # b) Create a conceptual ERD with cardinalities
 
-<img src = "../../assets/updated_exercise_4.png" width=600>
+<img src = "../../assets/updated_exercise_4_v2.png" width=600>
 
 ---
 
