@@ -40,5 +40,6 @@ Order_item
 
 # Business rules
 
-- Category must have at least 1 product
+- Category must have at least one product
+- One product can only belong to one category
 - Everything is shipped from the same warehouse
