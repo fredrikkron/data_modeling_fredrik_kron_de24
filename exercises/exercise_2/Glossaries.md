@@ -11,4 +11,4 @@
 |ternary relationship|
 |composite primary key|
 |relational schema notation|
-|entity constriants|
+|entity constraints|
