@@ -40,7 +40,7 @@ Example: look order 101: name + address repeated 3 times.
 - Example: adding a new customer without chosen product and/or quantity.
 
 4) Update anomaly
-- Definition: updating modifying are value leads to inconsitencies with other rows. In other words one would have to update same info in sevral places.
+- Definition: updating/modifying a value leads to inconsistencies with other rows. In other words one update would update same info in several places.
 - Example: If we need update name/address of a customer that is present in several rows, we would have to manually update it in each row linked to this customer or create inconsistent data.
 
 ## b)
@@ -48,9 +48,11 @@ Example: look order 101: name + address repeated 3 times.
 **checklist 1NF**
 - row order doesn't matter      (exists)
 - PK in each table              (exists)   only if we allow an implicit PK in form of a composite key (order_id, product_id).
-                                           Comment: it is not possible for a customer to add to same order, product with a new quantity. 
+                                           
+    **Comment:** it is not possible for a customer to add to same order, product with a new quantity. 
 - No repeating groups           (exists)   
-- Uniform column data           (exists)   data type can't be mixed within a column, one attribute = one data type
+- Uniform column data           (exists)   
+Data type can't be mixed within a column, one attribute = one data type
 
 **checklist 2NF**
 
