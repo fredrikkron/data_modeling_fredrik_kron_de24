@@ -14,11 +14,11 @@ a) Find different problems with this table, so that Ezecream will take you in fo
 
 b) Does this table satisfy 1NF, 2NF? Motivate.
 
-b) Normalize this table to 3NF, make conceptual diagram and relational schema notation for each relation. Relational schema notation is `RelationName(attribute1, attribute2, ...)`
+c) Normalize this table to 3NF, make conceptual diagram and relational schema notation for each relation. Relational schema notation is `RelationName(attribute1, attribute2, ...)`
 
-c) Now also add price attribute. Think about what would happen when price increases or decreases.
+d) Now also add price attribute. Think about what would happen when price increases or decreases.
 
-d) Write SQL code to get the total price for Ragnar Lodbrok. Insert data into your tables and test it out.
+e) Write SQL code to get the total price for Ragnar Lodbrok. Insert data into your tables and test it out.
 
 # Solution 
 ## a)
