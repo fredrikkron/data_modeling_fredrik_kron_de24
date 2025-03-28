@@ -12,6 +12,7 @@ VALUES
     );
 
 SELECT * FROM yrkesco.city;
+------------------------------------------------------------------
 
 INSERT INTO yrkesco.Address (street, postal_code, city_id)
 VALUES 
@@ -27,5 +28,17 @@ VALUES
     );
 
 SELECT * FROM yrkesco.address;
+------------------------------------------------------------------
 
+INSERT INTO yrkesco.School (name, address_id)
+VALUES
+    (
+        'Stockholmskolan',
+        2
+    ),
+    (
+        'Göteborgskolan',
+        1
+    );
 
+SELECT * FROM yrkesco.school;
