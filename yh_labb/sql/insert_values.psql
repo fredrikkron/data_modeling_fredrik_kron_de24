@@ -10,3 +10,22 @@ VALUES
         '2',
         'Göteborg'
     );
+
+SELECT * FROM yrkesco.city;
+
+INSERT INTO yrkesco.Address (street, postal_code, city_id)
+VALUES 
+    (
+        'Göteborgsgatan 12',
+         '411 73',
+          2
+    ),
+    (
+        'Stockholmsgatan 33',
+        '111 13',
+        1
+    );
+
+SELECT * FROM yrkesco.address;
+
+
