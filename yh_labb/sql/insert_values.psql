@@ -27,6 +27,12 @@ VALUES
         1
     );
 
+INSERT INTO yrkesco.Address (street, postal_code, city_id)
+VALUES 
+    ('Vasagatan 10', '111 20', 1),
+    ('Avenyn 25', '412 54', 2);    
+
+
 SELECT * FROM yrkesco.address;
 ------------------------------------------------------------------
 
@@ -42,3 +48,36 @@ VALUES
     );
 
 SELECT * FROM yrkesco.school;
+------------------------------------------------------------------
+
+INSERT INTO yrkesco.Personal_Info (first_name, last_name, personal_number, phone_number, email)
+VALUES
+    ('Emma', 'Johansson', '870512-1234', '072-1234567', 'emma.johansson@example.com'),
+    ('Lars', 'Andersson', '920305-5678', '073-9876543', 'lars.andersson@example.com'),
+    ('Anna', 'Karlsson', '851230-4321', '076-3456789', 'anna.karlsson@example.com'),
+    ('Erik', 'Svensson', '900721-8765', '070-2468135', 'erik.svensson@example.com'),
+    ('Maria', 'Nilsson', '950614-2143', '079-1239876', 'maria.nilsson@example.com'),
+    ('Johan', 'Bergström', '880923-5678', '070-9876543', 'johan.bergstrom@example.com'),
+    ('Sofia', 'Lindqvist', '930415-2345', '072-3456789', 'sofia.lindqvist@example.com'),
+    ('Daniel', 'Ekström', '910102-8765', '076-5671234', 'daniel.ekstrom@example.com'),
+    ('Elin', 'Forsberg', '970730-4321', '073-6784321', 'elin.forsberg@example.com'),
+    ('Oskar', 'Holmgren', '850515-2143', '079-2135467', 'oskar.holmgren@example.com');
+
+SELECT * FROM yrkesco.Personal_Info;
+------------------------------------------------------------------
+
+INSERT INTO yrkesco.Consult_Company (name, address_id, org_number, f_tax)
+VALUES
+    ('Teachy', 3, '112390-3341', TRUE),
+    ('El Teachery', 4, '900989-2390', TRUE);
+
+SELECT * FROM yrkesco.consult_company;
+------------------------------------------------------------------
+
+INSERT INTO yrkesco.Consult_Teacher (personal_info_id, company_id, hourly_fee)
+VALUES
+    (9, 1, 500),
+    (10, 2, 400);
+
+SELECT * FROM yrkesco.consult_teacher;
+------------------------------------------------------------------
