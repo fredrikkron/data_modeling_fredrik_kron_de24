@@ -4,3 +4,11 @@ CREATE TABLE IF NOT EXISTS City (
     city_id SERIAL PRIMARY KEY,
     name VARCHAR(50) UNIQUE NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS yrkesco.Address (
+    address_id SERIAL PRIMARY KEY,
+    street VARCHAR(100) NOT NULL,
+    postal_code VARCHAR(6) NOT NULL,
+    city_id INT NOT NULL,
+    FOREIGN KEY(city_id) REFERENCES yrkesco.city (city_id)
+);
