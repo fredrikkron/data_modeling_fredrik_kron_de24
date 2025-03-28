@@ -1,0 +1,12 @@
+SET search_path TO yrkesco;
+
+INSERT INTO City (city_id, name)
+VALUES
+    (
+        '1',
+        'Stockholm'
+    ),
+    (
+        '2',
+        'Göteborg'
+    );
