@@ -12,3 +12,10 @@ CREATE TABLE IF NOT EXISTS yrkesco.Address (
     city_id INT NOT NULL,
     FOREIGN KEY(city_id) REFERENCES yrkesco.city (city_id)
 );
+
+CREATE TABLE IF NOT EXISTS yrkesco.School (
+    school_id SERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    address_id INT NOT NULL,
+    FOREIGN KEY(address_id) REFERENCES yrkesco.address (address_id)
+)
