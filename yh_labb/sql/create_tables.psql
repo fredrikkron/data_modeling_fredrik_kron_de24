@@ -1,0 +1,6 @@
+SET search_path TO yrkesco;
+
+CREATE TABLE IF NOT EXISTS City (
+    city_id SERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL
+);
