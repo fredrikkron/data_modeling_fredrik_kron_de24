@@ -6,6 +6,7 @@ SELECT
     c.name
 FROM Address a
 INNER JOIN yrkesco.city c ON a.city_id = c.city_id;
+
 ---------------------------------------------------------------------------
 
 SELECT 
@@ -16,5 +17,19 @@ SELECT
     s.name
 FROM Address a
 INNER JOIN yrkesco.school s ON a.address_id = s.address_id;
+
+---------------------------------------------------------------------------
+
+SELECT 
+    a.address_id,
+    a.street,
+    a.postal_code,
+    c.city_id,
+    c.name AS city_name,
+    s.school_id,
+    s.name AS school_name
+FROM Address a
+INNER JOIN yrkesco.school s ON a.address_id = s.address_id
+INNER JOIN yrkesco.city c ON a.city_id = c.city_id;
 
 ---------------------------------------------------------------------------
