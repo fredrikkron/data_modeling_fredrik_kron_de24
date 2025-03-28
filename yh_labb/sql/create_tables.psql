@@ -18,4 +18,32 @@ CREATE TABLE IF NOT EXISTS yrkesco.School (
     name VARCHAR(50) UNIQUE NOT NULL,
     address_id INT NOT NULL,
     FOREIGN KEY(address_id) REFERENCES yrkesco.address (address_id)
-)
+);
+
+CREATE TABLE IF NOT EXISTS yrkesco.Consult_Company (
+    company_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) UNIQUE NOT NULL,
+    address_id INT NOT NULL,
+    FOREIGN KEY(address_id) REFERENCES yrkesco.address (address_id),
+    org_number VARCHAR(12) UNIQUE NOT NULL,
+    f_tax BOOLEAN NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS yrkesco.Personal_Info (
+    personal_info_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    personal_number VARCHAR(12) UNIQUE NOT NULL,
+    phone_number VARCHAR(15) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS yrkesco.Consult_Teacher (
+    consult_id SERIAL PRIMARY KEY,
+    personal_info_id INT NOT NULL,
+    FOREIGN KEY(personal_info_id) REFERENCES yrkesco.Personal_Info(personal_info_id),
+    company_id INT NOT NULL,
+    FOREIGN KEY(company_id) REFERENCES yrkesco.Consult_Company(company_id),
+    hourly_fee DECIMAL(5,2) NOT NULL  
+);
+
