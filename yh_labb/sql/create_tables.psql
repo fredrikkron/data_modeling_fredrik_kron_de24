@@ -92,3 +92,8 @@ CREATE TABLE IF NOT EXISTS yrkesco.Teacher (
     employment_type_id INT NOT NULL,
     FOREIGN KEY (employment_type_id) REFERENCES yrkesco.Employment_Type(employment_type_id)
 );
+
+CREATE TABLE IF NOT EXISTS yrkesco.Program (
+    program_id SERIAL PRIMARY KEY,
+    program_name VARCHAR(100) UNIQUE NOT NULL
+);

@@ -141,3 +141,11 @@ VALUES
 SELECT * FROM yrkesco.Teacher;
 
 ------------------------------------------------------------------
+
+INSERT INTO yrkesco.Program (program_name)
+VALUES
+    ('Data Engineer');
+
+SELECT * FROM yrkesco.Program;
+
+------------------------------------------------------------------
