@@ -97,3 +97,9 @@ CREATE TABLE IF NOT EXISTS yrkesco.Program (
     program_id SERIAL PRIMARY KEY,
     program_name VARCHAR(100) UNIQUE NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS yrkesco.Education_Leader (
+    education_leader_id SERIAL PRIMARY KEY,
+    personal_info_id INT NOT NULL,
+    FOREIGN KEY (personal_info_id) REFERENCES yrkesco.Personal_info(personal_info_id)
+);
