@@ -33,3 +33,15 @@ INNER JOIN yrkesco.school s ON a.address_id = s.address_id
 INNER JOIN yrkesco.city c ON a.city_id = c.city_id;
 
 ---------------------------------------------------------------------------
+
+SELECT 
+    s.student_id, 
+    p.first_name, 
+    p.last_name, 
+    p.personal_number, 
+    p.phone_number, 
+    p.email
+FROM yrkesco.Student s
+JOIN yrkesco.Personal_Info p ON s.personal_info_id = p.personal_info_id;
+
+---------------------------------------------------------------------------

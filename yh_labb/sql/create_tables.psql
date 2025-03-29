@@ -47,3 +47,9 @@ CREATE TABLE IF NOT EXISTS yrkesco.Consult_Teacher (
     hourly_fee DECIMAL(5,2) NOT NULL  
 );
 
+
+CREATE TABLE IF NOT EXISTS yrkesco.Student (
+    student_id SERIAL PRIMARY KEY,
+    personal_info_id INT NOT NULL,
+    FOREIGN KEY(personal_info_id) REFERENCES yrkesco.Personal_info(personal_info_id)
+);

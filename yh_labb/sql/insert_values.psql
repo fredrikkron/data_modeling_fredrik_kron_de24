@@ -32,6 +32,14 @@ VALUES
     ('Vasagatan 10', '111 20', 1),
     ('Avenyn 25', '412 54', 2);    
 
+INSERT INTO yrkesco.Address (street, postal_code, city_id)
+VALUES 
+    ('Drottninggatan 45', '111 51', 1),
+    ('Södermalmsvägen 8', '118 25', 1),
+    ('Kungsgatan 30', '111 35', 1),
+    ('Linnégatan 22', '413 04', 2),
+    ('Hisingenvägen 14', '417 05', 2),
+    ('Järntorget 3', '413 01', 2);
 
 SELECT * FROM yrkesco.address;
 ------------------------------------------------------------------
@@ -80,4 +88,14 @@ VALUES
     (10, 2, 400);
 
 SELECT * FROM yrkesco.consult_teacher;
+------------------------------------------------------------------
+
+INSERT INTO yrkesco.Student (personal_info_id)
+VALUES
+    (1),
+    (2),
+    (3),
+    (4);
+
+SELECT * FROM yrkesco.Student;
 ------------------------------------------------------------------
