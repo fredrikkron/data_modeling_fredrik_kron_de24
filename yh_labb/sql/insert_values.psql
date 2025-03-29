@@ -99,3 +99,14 @@ VALUES
 
 SELECT * FROM yrkesco.Student;
 ------------------------------------------------------------------
+
+INSERT INTO yrkesco.Course (course_name, course_code, course_points, course_type, description)
+VALUES
+    ('Programmering', 'PROG', 40, 'Programkurs', 'Introkurs inom programmering med Python'),
+    ('Datamodellering', 'DATAMOD', 30, 'Programkurs', 'Kunskapsutveckling inom olika datamodeller'),
+    ('Projektmetodik', 'PROJMET', 15, 'Programkurs', 'Agil arbetsmetodik och projektstyrningsverktyg'),
+    ('Java', 'JAVA', 40, 'Fristående', 'Introkurs inom programmering med Java');
+
+SELECT * FROM yrkesco.Course;
+
+------------------------------------------------------------------
