@@ -122,3 +122,22 @@ VALUES
 SELECT * FROM yrkesco.Enrollment;
 
 ------------------------------------------------------------------
+
+INSERT INTO yrkesco.Employment_Type (type_name)
+VALUES
+    ('Tillsvidare'),
+    ('Visstid'),
+    ('Deltid');
+
+SELECT * FROM yrkesco.Employment_Type;
+
+------------------------------------------------------------------
+
+INSERT INTO yrkesco.Teacher (personal_info_id, employment_type_id)
+VALUES
+    (5,1),
+    (6,2);
+
+SELECT * FROM yrkesco.Teacher;
+
+------------------------------------------------------------------
