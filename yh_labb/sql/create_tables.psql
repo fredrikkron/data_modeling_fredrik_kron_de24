@@ -103,3 +103,20 @@ CREATE TABLE IF NOT EXISTS yrkesco.Education_Leader (
     personal_info_id INT NOT NULL,
     FOREIGN KEY (personal_info_id) REFERENCES yrkesco.Personal_info(personal_info_id)
 );
+
+CREATE TABLE IF NOT EXISTS yrkesco.Teacher_Course (
+    teacher_id INT NOT NULL,
+    FOREIGN KEY (teacher_id) REFERENCES yrkesco.Teacher(teacher_id),
+    course_id INT NOT NULL,
+    FOREIGN KEY (course_id) REFERENCES yrkesco.Course(course_id),
+    PRIMARY KEY (teacher_id, course_id)
+);
+
+CREATE TABLE IF NOT EXISTS yrkesco.Program_Course (
+    program_id INT NOT NULL,
+    FOREIGN KEY (program_id) REFERENCES yrkesco.Program(program_id),
+    course_id INT NOT NULL,
+    FOREIGN KEY (course_id) REFERENCES yrkesco.Course(course_id),
+    PRIMARY KEY (program_id, course_id)
+);
+
