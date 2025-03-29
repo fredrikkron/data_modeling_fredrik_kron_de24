@@ -159,3 +159,6 @@ SELECT * FROM yrkesco.Education_Leader;
 
 ------------------------------------------------------------------
 
+INSERT INTO yrkesco.Class (class_code, program_id, education_leader_id, school_id)
+VALUES
+    ('DE24', 1, 1, 1);
