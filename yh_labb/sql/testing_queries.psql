@@ -45,3 +45,20 @@ FROM yrkesco.Student s
 JOIN yrkesco.Personal_Info p ON s.personal_info_id = p.personal_info_id;
 
 ---------------------------------------------------------------------------
+
+SELECT 
+    s.student_id, 
+    p.first_name, 
+    p.last_name, 
+    c.course_id, 
+    c.course_name, 
+    e.term, 
+    e.enrollment_year, 
+    e.grade
+FROM yrkesco.Enrollment e
+JOIN yrkesco.Student s ON e.student_id = s.student_id
+JOIN yrkesco.Personal_Info p ON s.personal_info_id = p.personal_info_id
+JOIN yrkesco.Course c ON e.course_id = c.course_id
+WHERE c.course_id = 4;
+
+---------------------------------------------------------------------------

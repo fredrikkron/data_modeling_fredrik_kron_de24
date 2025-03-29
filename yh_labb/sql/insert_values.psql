@@ -110,3 +110,15 @@ VALUES
 SELECT * FROM yrkesco.Course;
 
 ------------------------------------------------------------------
+
+INSERT INTO yrkesco.Enrollment (student_id, course_id, grade, term, enrollment_year)
+VALUES
+    (1,1, 'G', 'HT24', 2024),
+    (1,2, 'VG', 'HT24', 2024),
+    (1,3, NULL, 'VT25', 2024),
+    (2,4, 'VG', 'HT24', 2024),
+    (3,4, NULL, 'HT25', 2025);
+
+SELECT * FROM yrkesco.Enrollment;
+
+------------------------------------------------------------------

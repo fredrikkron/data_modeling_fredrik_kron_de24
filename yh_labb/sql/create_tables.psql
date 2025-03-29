@@ -64,3 +64,18 @@ CREATE TABLE IF NOT EXISTS yrkesco.Course (
 );
 
 -- ALTER TABLE yrkesco.school RENAME COLUMN name TO school_name;
+
+CREATE TABLE IF NOT EXISTS yrkesco.Enrollment (
+    enrollment_id SERIAL PRIMARY KEY,
+    student_id INT NOT NULL,
+    FOREIGN KEY (student_id) REFERENCES yrkesco.Student(student_id),
+    course_id INT NOT NULL, 
+    FOREIGN KEY (course_id) REFERENCES yrkesco.Course(course_id),
+    class_id INT,
+    grade VARCHAR(3) NOT NULL,
+    term VARCHAR(10) NOT NULL,
+    year INT NOT NULL
+);
+
+-- ALTER TABLE yrkesco.Enrollment RENAME COLUMN year TO enrollment_year;
+-- ALTER TABLE yrkesco.Enrollment ALTER COLUMN grade DROP NOT NULL;
