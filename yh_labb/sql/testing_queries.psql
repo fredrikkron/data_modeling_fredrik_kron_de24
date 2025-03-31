@@ -71,3 +71,7 @@ SELECT * FROM yrkesco.enrollment;
 SELECT * FROM yrkesco.consult_company;
 SELECT * FROM yrkesco.consult_teacher;
 SELECT * FROM yrkesco.school;
+SELECT * FROM yrkesco.teacher;
+SELECT * FROM yrkesco.teacher_course;
+
+---------------------------------------------------------------------------
