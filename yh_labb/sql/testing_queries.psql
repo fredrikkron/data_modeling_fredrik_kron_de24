@@ -3,8 +3,8 @@ SELECT
     a.street,
     a.postal_code,
     c.city_id,
-    c.name
-FROM Address a
+    c.city_name
+FROM yrkesco.Address a
 INNER JOIN yrkesco.city c ON a.city_id = c.city_id;
 
 ---------------------------------------------------------------------------
@@ -14,8 +14,8 @@ SELECT
     a.street,
     a.postal_code,
     s.school_id,
-    s.name
-FROM Address a
+    s.school_name
+FROM yrkesco.Address a
 INNER JOIN yrkesco.school s ON a.address_id = s.address_id;
 
 ---------------------------------------------------------------------------
@@ -25,10 +25,10 @@ SELECT
     a.street,
     a.postal_code,
     c.city_id,
-    c.name AS city_name,
+    c.city_name,
     s.school_id,
-    s.name AS school_name
-FROM Address a
+    s.school_name
+FROM yrkesco.Address a
 INNER JOIN yrkesco.school s ON a.address_id = s.address_id
 INNER JOIN yrkesco.city c ON a.city_id = c.city_id;
 
@@ -62,3 +62,8 @@ JOIN yrkesco.Course c ON e.course_id = c.course_id
 WHERE c.course_id = 4;
 
 ---------------------------------------------------------------------------
+
+SELECT * FROM yrkesco.course;
+SELECT * FROM yrkesco.class;
+SELECT * FROM yrkesco.student;
+SELECT * FROM yrkesco.personal_info;
