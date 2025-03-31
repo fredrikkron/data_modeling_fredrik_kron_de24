@@ -194,16 +194,26 @@ VALUES
 SELECT * FROM yrkesco.class;
 ------------------------------------------------------------------
 
-
-
-
+INSERT INTO yrkesco.teacher_course (teacher_id, course_id)
+VALUES
+    (1,1),
+    (1,2),
+    (1,3),
+    (2,5),
+    (2,6),
+    (2,7);
 
 SELECT * FROM yrkesco.teacher_course;
 
 ------------------------------------------------------------------
 
-
-
-
+INSERT INTO yrkesco.program_course (program_id, course_id)
+VALUES
+    (1,1),
+    (1,2),
+    (1,3),
+    (2,5),
+    (2,6),
+    (2,7);
 
 SELECT * FROM yrkesco.program_course;
