@@ -54,6 +54,7 @@ CREATE TABLE IF NOT EXISTS yrkesco.Student (
     FOREIGN KEY(personal_info_id) REFERENCES yrkesco.Personal_info(personal_info_id)
 );
 
+
 CREATE TABLE IF NOT EXISTS yrkesco.Course (
     course_id SERIAL PRIMARY KEY,
     course_name VARCHAR(100) UNIQUE NOT NULL,
