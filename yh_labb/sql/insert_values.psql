@@ -1,6 +1,6 @@
 SET search_path TO yrkesco;
 
-INSERT INTO City (city_id, name)
+INSERT INTO yrkesco.City (city_id, city_name)
 VALUES
     (
         '1',
@@ -44,7 +44,7 @@ VALUES
 SELECT * FROM yrkesco.address;
 ------------------------------------------------------------------
 
-INSERT INTO yrkesco.School (name, address_id)
+INSERT INTO yrkesco.School (school_name, address_id)
 VALUES
     (
         'Stockholmskolan',
@@ -74,7 +74,7 @@ VALUES
 SELECT * FROM yrkesco.Personal_Info;
 ------------------------------------------------------------------
 
-INSERT INTO yrkesco.Consult_Company (name, address_id, org_number, f_tax)
+INSERT INTO yrkesco.Consult_Company (company_name, address_id, org_number, f_tax)
 VALUES
     ('Teachy', 3, '112390-3341', TRUE),
     ('El Teachery', 4, '900989-2390', TRUE);
@@ -107,6 +107,12 @@ VALUES
     ('Projektmetodik', 'PROJMET', 15, 'Programkurs', 'Agil arbetsmetodik och projektstyrningsverktyg'),
     ('Java', 'JAVA', 40, 'Fristående', 'Introkurs inom programmering med Java');
 
+INSERT INTO yrkesco.Course (course_name, course_code, course_points, course_type, description)
+VALUES
+    ('Presentationsteknik', 'PRETEK', 10, 'Programkurs', 'Introkurs för kommunikation/presentation'),
+    ('VVS - Värme/Kyla', 'VVSVK', 40, 'Programkurs', 'Lära om uppvärmings- och kylsystem'),
+    ('Byggteknik och hållbarhet', 'BTH', 25, 'Programkurs', 'Byggtekniker och hållbar konstruktion');
+
 SELECT * FROM yrkesco.Course;
 
 ------------------------------------------------------------------
@@ -118,6 +124,12 @@ VALUES
     (1,3, NULL, 'VT25', 2024),
     (2,4, 'VG', 'HT24', 2024),
     (3,4, NULL, 'HT25', 2025);
+
+INSERT INTO yrkesco.Enrollment (student_id, course_id, grade, term, enrollment_year)
+VALUES
+    (4,5,'VG','HT24',2024),
+    (4,6,'G','HT24',2024),
+    (4,7,NULL,'VT25',2024);
 
 SELECT * FROM yrkesco.Enrollment;
 
@@ -146,6 +158,10 @@ INSERT INTO yrkesco.Program (program_name)
 VALUES
     ('Data Engineer');
 
+INSERT INTO yrkesco.Program (program_name)
+VALUES
+    ('VVS-ingenjör');
+
 SELECT * FROM yrkesco.Program;
 
 ------------------------------------------------------------------
@@ -162,3 +178,32 @@ SELECT * FROM yrkesco.Education_Leader;
 INSERT INTO yrkesco.Class (class_code, program_id, education_leader_id, school_id)
 VALUES
     ('DE24', 1, 1, 1);
+
+INSERT INTO yrkesco.Class (class_code, program_id, education_leader_id, school_id)
+VALUES
+    ('DE25', 1, 1, 1),
+    ('DE26', 1, 1, 1);
+
+
+INSERT INTO yrkesco.Class (class_code, program_id, education_leader_id, school_id)
+VALUES
+    ('VVS24', 2, 2, 2),
+    ('VVS25', 2, 2, 2),
+    ('VVS26', 2, 2, 2);
+
+SELECT * FROM yrkesco.class;
+------------------------------------------------------------------
+
+
+
+
+
+SELECT * FROM yrkesco.teacher_course;
+
+------------------------------------------------------------------
+
+
+
+
+
+SELECT * FROM yrkesco.program_course;
