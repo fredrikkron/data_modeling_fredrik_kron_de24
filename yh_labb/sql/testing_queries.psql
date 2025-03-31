@@ -1,3 +1,5 @@
+-- list of addresses
+
 SELECT 
     a.address_id,
     a.street,
@@ -8,6 +10,7 @@ FROM yrkesco.Address a
 INNER JOIN yrkesco.city c ON a.city_id = c.city_id;
 
 ---------------------------------------------------------------------------
+-- Address info and what school is located there
 
 SELECT 
     a.address_id,
@@ -19,6 +22,7 @@ FROM yrkesco.Address a
 INNER JOIN yrkesco.school s ON a.address_id = s.address_id;
 
 ---------------------------------------------------------------------------
+-- Schools and their address + city location
 
 SELECT 
     a.address_id,
@@ -33,6 +37,7 @@ INNER JOIN yrkesco.school s ON a.address_id = s.address_id
 INNER JOIN yrkesco.city c ON a.city_id = c.city_id;
 
 ---------------------------------------------------------------------------
+-- Personal info on all the students
 
 SELECT 
     s.student_id, 
@@ -45,6 +50,7 @@ FROM yrkesco.Student s
 JOIN yrkesco.Personal_Info p ON s.personal_info_id = p.personal_info_id;
 
 ---------------------------------------------------------------------------
+-- A specific student that has enrolled a course and what grade he/she got
 
 SELECT 
     s.student_id, 
@@ -59,7 +65,7 @@ FROM yrkesco.Enrollment e
 JOIN yrkesco.Student s ON e.student_id = s.student_id
 JOIN yrkesco.Personal_Info p ON s.personal_info_id = p.personal_info_id
 JOIN yrkesco.Course c ON e.course_id = c.course_id
-WHERE c.course_id = 3;
+WHERE c.course_id = 1;
 
 ---------------------------------------------------------------------------
 
@@ -75,3 +81,16 @@ SELECT * FROM yrkesco.teacher;
 SELECT * FROM yrkesco.teacher_course;
 
 ---------------------------------------------------------------------------
+-- A teacher and what course he/she is teaching out
+
+SELECT 
+    t.teacher_id, 
+    pi.first_name, 
+    pi.last_name, 
+    c.course_id, 
+    c.course_name
+FROM yrkesco.teacher_course tc
+JOIN yrkesco.teacher t ON tc.teacher_id = t.teacher_id
+JOIN yrkesco.personal_info pi ON t.personal_info_id = pi.personal_info_id
+JOIN yrkesco.course c ON tc.course_id = c.course_id
+WHERE t.teacher_id = 1;
