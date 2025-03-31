@@ -133,3 +133,10 @@ CREATE TABLE IF NOT EXISTS yrkesco.Class (
 );
 
 
+CREATE TABLE IF NOT EXISTS yrkesco.Consult_Teacher_Course (
+    consult_id INT NOT NULL,
+    FOREIGN KEY(consult_id) REFERENCES yrkesco.consult_teacher(consult_id),
+    course_id INT NOT NULL,
+    FOREIGN KEY (course_id) REFERENCES yrkesco.Course(course_id),
+    PRIMARY KEY (consult_id, course_id)
+);
