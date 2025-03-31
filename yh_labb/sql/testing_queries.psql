@@ -59,7 +59,7 @@ FROM yrkesco.Enrollment e
 JOIN yrkesco.Student s ON e.student_id = s.student_id
 JOIN yrkesco.Personal_Info p ON s.personal_info_id = p.personal_info_id
 JOIN yrkesco.Course c ON e.course_id = c.course_id
-WHERE c.course_id = 4;
+WHERE c.course_id = 3;
 
 ---------------------------------------------------------------------------
 
@@ -67,3 +67,7 @@ SELECT * FROM yrkesco.course;
 SELECT * FROM yrkesco.class;
 SELECT * FROM yrkesco.student;
 SELECT * FROM yrkesco.personal_info;
+SELECT * FROM yrkesco.enrollment;
+SELECT * FROM yrkesco.consult_company;
+SELECT * FROM yrkesco.consult_teacher;
+SELECT * FROM yrkesco.school;
