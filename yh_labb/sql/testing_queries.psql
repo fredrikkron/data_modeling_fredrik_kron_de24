@@ -94,3 +94,18 @@ JOIN yrkesco.teacher t ON tc.teacher_id = t.teacher_id
 JOIN yrkesco.personal_info pi ON t.personal_info_id = pi.personal_info_id
 JOIN yrkesco.course c ON tc.course_id = c.course_id
 WHERE t.teacher_id = 1;
+
+---------------------------------------------------------------------------
+-- A consult connected to a course that is not part of a program
+
+SELECT 
+    ct.consult_id, 
+    pi.first_name, 
+    pi.last_name, 
+    c.course_id, 
+    c.course_name, 
+    c.course_type
+FROM yrkesco.Consult_Teacher ct
+JOIN yrkesco.Personal_Info pi ON ct.personal_info_id = pi.personal_info_id
+JOIN yrkesco.Consult_Teacher_Course ctc ON ct.consult_id = ctc.consult_id
+JOIN yrkesco.Course c ON ctc.course_id = c.course_id;
