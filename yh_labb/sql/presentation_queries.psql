@@ -1,0 +1,87 @@
+-- Schools and their address + city location
+
+SELECT 
+    a.address_id,
+    a.street,
+    a.postal_code,
+    s.school_id,
+    s.school_name,
+    c.city_id,
+    c.city_name
+FROM yrkesco.Address a
+JOIN yrkesco.school s ON a.address_id = s.address_id
+JOIN yrkesco.city c ON a.city_id = c.city_id;
+
+-- Every class that belongs to a program with responsible education leader
+
+SELECT 
+    c.class_id, 
+    c.class_code, 
+    p.program_name, 
+    pi.first_name, 
+    pi.last_name
+FROM yrkesco.Class c
+JOIN yrkesco.Program p ON c.program_id = p.program_id
+JOIN yrkesco.Education_Leader el ON c.education_leader_id = el.education_leader_id
+JOIN yrkesco.Personal_Info pi ON el.personal_info_id = pi.personal_info_id;
+
+
+-- Personal details on educational leaders
+
+SELECT 
+    e.education_leader_id, 
+    p.first_name,
+    p.last_name, 
+    p.personal_number, 
+    p.phone_number, 
+    p.email
+FROM yrkesco.education_leader e
+JOIN yrkesco.Personal_Info p ON e.personal_info_id = p.personal_info_id;
+
+
+-- Students with their enrolled courses, term and grade 
+
+SELECT 
+    s.student_id,
+    p.first_name, 
+    p.last_name, 
+    c.course_id, 
+    c.course_name, 
+    e.term, 
+    e.enrollment_year, 
+    e.grade
+FROM yrkesco.Enrollment e
+JOIN yrkesco.Student s ON e.student_id = s.student_id
+JOIN yrkesco.Personal_Info p ON s.personal_info_id = p.personal_info_id
+JOIN yrkesco.Course c ON e.course_id = c.course_id;
+
+
+-- Hired teachers, their type of employment and what course he/she is teaching out
+
+SELECT
+    t.teacher_id, 
+    pi.first_name, 
+    pi.last_name,
+    em.type_name, 
+    c.course_id, 
+    c.course_name,
+    c.course_type
+FROM yrkesco.teacher_course tc
+JOIN yrkesco.teacher t ON tc.teacher_id = t.teacher_id
+JOIN yrkesco.personal_info pi ON t.personal_info_id = pi.personal_info_id
+JOIN yrkesco.course c ON tc.course_id = c.course_id
+JOIN yrkesco.employment_type em ON t.employment_type_id = em.employment_type_id;
+
+-- A course teached by a consult
+
+SELECT 
+    ct.consult_id, 
+    pi.first_name, 
+    pi.last_name, 
+    c.course_id, 
+    c.course_name, 
+    c.course_type
+FROM yrkesco.Consult_Teacher ct
+JOIN yrkesco.Personal_Info pi ON ct.personal_info_id = pi.personal_info_id
+JOIN yrkesco.Consult_Teacher_Course ctc ON ct.consult_id = ctc.consult_id
+JOIN yrkesco.Course c ON ctc.course_id = c.course_id;
